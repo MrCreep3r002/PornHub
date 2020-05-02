@@ -80,7 +80,7 @@ async def _(event):
 
 # Helpers
 if Config.TG_BOT_USER_NAME_BF_HER is None or tgbot is None:
-    @borg.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
+    @borg.on(event.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"txt_prod_(.*)")
     ))
     async def on_plug_in_callback_query_handler(event):
